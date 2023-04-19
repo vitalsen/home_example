@@ -40,6 +40,16 @@ public class Controller {
         return petModel.getFromList(id.get("id"));
     }
 
+    @DeleteMapping(value = "/deletePet",consumes = "application/json",produces ="application/json")
+    public ResponseEntity<Void> deletePet(@PathVariable Long id) {
 
+        return ResponseEntity.ok().build();
+    }
 
+    @PutMapping(value="/putPet",consumes = "application/json",produces ="application/json")
+    public ResponseEntity<Void> updatePet(@PathVariable Long id, @RequestBody Pet pet) {
+
+        return ResponseEntity.ok().build();
+    }
 }
+
